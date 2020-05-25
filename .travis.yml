@@ -2,7 +2,6 @@ sudo: required
 
 language: go
 go_import_path: github.com/jaegertracing/jaeger
-arch: ppc64le
 os: linux
 
 dist: bionic
@@ -15,7 +14,7 @@ matrix:
     - COVERAGE=true
   - go: "1.14.x"
     env:
-    - PROTO_GEN_TEST=false
+    - PROTO_GEN_TEST=true
   - go: "1.14.x"
     env:
     - ALL_IN_ONE=true
